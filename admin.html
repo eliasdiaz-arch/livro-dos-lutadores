@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Livro dos Atletas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="index.html">Livro dos <b>Atletas</b> <small class="badge">ADMIN</small></a>
+    <div id="user-box" hidden>
+      <span id="user-email" class="meta"></span>
+      <button class="btn sec" id="btn-sair">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- LOGIN -->
+    <section id="tela-login" class="login-box" hidden>
+      <h2>Entrar</h2>
+      <form id="form-login">
+        <label>E-mail<input type="email" id="l-email" required autocomplete="username"></label>
+        <label>Senha<input type="password" id="l-senha" required autocomplete="current-password"></label>
+        <button class="btn" type="submit">Entrar</button>
+        <p class="erro" id="l-erro"></p>
+      </form>
+    </section>
+
+    <!-- PAINEL -->
+    <section id="tela-painel" hidden>
+      <div class="admin-grid">
+        <aside class="lista-lat">
+          <button class="btn" id="btn-novo">+ Novo atleta</button>
+          <input id="busca" type="search" placeholder="Buscar atleta" class="sel">
+          <div id="lista"></div>
+          <button class="btn sec" id="btn-importar" hidden>Importar dados de exemplo (data.js)</button>
+        </aside>
+
+        <div id="editor"><div class="vazio">Escolha um atleta ou crie um novo.</div></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

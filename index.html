@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livro dos Atletas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="#/">Livro dos <b>Atletas</b></a>
+    <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+    <nav id="menu" aria-label="Principal">
+      <a href="#/" data-r="">Início</a>
+      <a href="#/lutadores" data-r="lutadores">Lutadores</a>
+      <a href="#/modalidades" data-r="modalidades">Modalidades</a>
+      <a href="#/rankings" data-r="rankings">Rankings</a>
+      <a href="#/recordes" data-r="recordes">Recordes</a>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="rodape">
+    Livro dos Atletas. Dados de exemplo: confira nas fontes oficiais antes de publicar.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
